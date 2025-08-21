@@ -4,7 +4,7 @@
 #pragma once
 #include "fish.h"
 
-#define MAX_FISH 10
+#define MAX_FISH 20
 
 typedef struct Aquarium {
     int width, height;
