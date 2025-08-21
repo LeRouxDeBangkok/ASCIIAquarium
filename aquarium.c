@@ -7,10 +7,16 @@ void init_aquarium(Aquarium *aq, int w, int h) {
     aq->fish_count = MAX_FISH;
 
     for (int i = 0; i < aq->fish_count; i++) {
-        aq->fish[i].x = rand_range(0, w - 1);
+        aq->fish[i].x = rand_range(0, w - 4);
         aq->fish[i].y = rand_range(0, h - 1);
-        aq->fish[i].dx = (rand_range(0, 1) == 0) ? 1 : -1;
-        aq->fish[i].symbol = (rand_range(0, 1) == 0) ? '><' : 'o';
+        if (rand_range(0, 1) == 0) {
+            aq->fish[i].dx = 1;
+            aq->fish[i].sprite = "><>";
+        } else {
+            aq->fish[i].dx = -1;
+            aq->fish[i].sprite = "<><";
+        }
+        aq->fish[i].length = 3;
     }
 }
 

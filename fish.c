@@ -7,13 +7,13 @@ void move_fish(Fish *f, int width) {
     if (f->x < 0) {
         f->x = 0;
         f->dx = 1;
-    } else if (f->x >= width) {
-        f->x = width - 1;
+    } else if (f->x + f->length >= width) {
+        f->x = width - f->length;
         f->dx = -1;
     }
 }
 
 void draw_fish(const Fish *f) {
     set_cursor(f->x, f->y);
-    printf("%c", f->symbol);
+    printf("%s", f->sprite);
 }

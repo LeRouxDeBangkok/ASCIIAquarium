@@ -6,7 +6,8 @@
 typedef struct Fish {
     int x, y;
     int dx;
-    char symbol;
+    const char* sprite;
+    int length;
 } Fish;
 
 void move_fish(Fish* f, int width);
