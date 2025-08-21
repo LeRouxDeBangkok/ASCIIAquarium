@@ -8,8 +8,9 @@ int main() {
     init_aquarium(&aq, 80, 20);
 
     while (1) {
-        update_aquarium(&aq);
         draw_aquarium(&aq);
+        update_aquarium(&aq);
+        update_bubbles(&aq);
         Sleep(200);
     }
 
