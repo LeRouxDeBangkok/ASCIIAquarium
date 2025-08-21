@@ -5,7 +5,7 @@
 int main() {
     init_random();
     Aquarium aq;
-    init_aquarium(&aq, 140, 40);
+    init_aquarium(&aq, 80, 20);
 
     while (1) {
         update_aquarium(&aq);
